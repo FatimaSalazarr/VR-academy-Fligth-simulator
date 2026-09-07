@@ -1,4 +1,9 @@
 import { useState, useEffect } from "react";
+import planeImg from "./plane.jpeg";
+import fatiImg from "./fati.jpeg";
+import doriaImg from "./doria_informal.jpg";
+import alanImg from "./alan.jpeg";
+import belenImg from "./belen.jpeg";
 
 const NAV_ITEMS = [
   { id: "hero", label: "Inicio" },
@@ -11,11 +16,11 @@ const NAV_ITEMS = [
 
 const TEAM = [
   { name: "Adrián Martínez Treviño", id: "1958524", role: "Desarrollador de Hardware", icon: "⚙" },
-  { name: "Fatima Salazar Loyola", id: "2048779", role: "Programadora", icon: "💻", image: "./fati.jpeg" },
-  { name: "Doria Montserrat Castañeda Gastelum", id: "2056800", role: "Programadora", icon: "💻", image: "./doria_informal.jpg" },
+  { name: "Fatima Salazar Loyola", id: "2048779", role: "Programadora", icon: "💻", image: fatiImg },
+  { name: "Doria Montserrat Castañeda Gastelum", id: "2056800", role: "Programadora", icon: "💻", image: doriaImg },
   { name: "Elizabeth Cuevas Arreola", id: "2086268", role: "Documentación", icon: "📋" },
-  { name: "Alan Yahir Correa Gutiérrez", id: "2007587", role: "Marketing", icon: "📡", image: "./alan.jpeg" },
-  { name: "Belén Quetzalli Martínez Gómez", id: "2043270", role: "Marketing", icon: "📡", image: "./belen.jpeg" },
+  { name: "Alan Yahir Correa Gutiérrez", id: "2007587", role: "Marketing", icon: "📡", image: alanImg },
+  { name: "Belén Quetzalli Martínez Gómez", id: "2043270", role: "Marketing", icon: "📡", image: belenImg },
 ];
 
 const OBJECTIVES = [
@@ -339,8 +344,8 @@ function SimulacionSection() {
 
           <div className="relative">
             <div className="hud-border bg-[#0d1529] overflow-hidden">
-             <img
-                src="./plane.jpeg"
+            <img
+                src={planeImg}
                 alt="Cockpit de aeronave militar"
                 className="w-full h-64 object-cover opacity-70"
               />
