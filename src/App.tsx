@@ -11,11 +11,11 @@ const NAV_ITEMS = [
 
 const TEAM = [
   { name: "Adrián Martínez Treviño", id: "1958524", role: "Desarrollador de Hardware", icon: "⚙" },
-  { name: "Fatima Salazar Loyola", id: "2048779", role: "Programadora", icon: "💻", image: "fati.jpeg" },
-  { name: "Doria Montserrat Castañeda Gastelum", id: "2056800", role: "Programadora", icon: "💻", image: "doria_informal.jpg" },
+  { name: "Fatima Salazar Loyola", id: "2048779", role: "Programadora", icon: "💻", image: "./fati.jpeg" },
+  { name: "Doria Montserrat Castañeda Gastelum", id: "2056800", role: "Programadora", icon: "💻", image: "./doria_informal.jpg" },
   { name: "Elizabeth Cuevas Arreola", id: "2086268", role: "Documentación", icon: "📋" },
-  { name: "Alan Yahir Correa Gutiérrez", id: "2007587", role: "Marketing", icon: "📡", image: "alan.jpeg" },
-  { name: "Belén Quetzalli Martínez Gómez", id: "2043270", role: "Marketing", icon: "📡", image: "belen.jpeg" },
+  { name: "Alan Yahir Correa Gutiérrez", id: "2007587", role: "Marketing", icon: "📡", image: "./alan.jpeg" },
+  { name: "Belén Quetzalli Martínez Gómez", id: "2043270", role: "Marketing", icon: "📡", image: "./belen.jpeg" },
 ];
 
 const OBJECTIVES = [
