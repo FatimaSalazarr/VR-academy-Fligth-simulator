@@ -10,12 +10,12 @@ const NAV_ITEMS = [
 ];
 
 const TEAM = [
-  { name: "Adrián Martínez Treviño", id: "1958524", role: "Desarrollador de Hardware", icon: "⚙", image: "/adrian.jpg" },
-  { name: "Fatima Salazar Loyola", id: "2048779", role: "Programadora", icon: "💻", image: "/fati.jpeg" },
-  { name: "Doria Montserrat Castañeda Gastelum", id: "2056800", role: "Programadora", icon: "💻", image: "/doria_informal.jpg" },
-  { name: "Elizabeth Cuevas Arreola", id: "2086268", role: "Documentación", icon: "📋", image: "/elizabeth.jpg" },
-  { name: "Alan Yahir Correa Gutiérrez", id: "2007587", role: "Marketing", icon: "📡", image: "/alan.jpeg" },
-  { name: "Belén Quetzalli Martínez Gómez", id: "2043270", role: "Marketing", icon: "📡", image: "/belen.jpeg" },
+  { name: "Adrián Martínez Treviño", id: "1958524", role: "Desarrollador de Hardware", icon: "⚙", image: "./adrian.jpg" },
+  { name: "Fatima Salazar Loyola", id: "2048779", role: "Programadora", icon: "💻", image: "./fati.jpeg" },
+  { name: "Doria Montserrat Castañeda Gastelum", id: "2056800", role: "Programadora", icon: "💻", image: "./doria_informal.jpg" },
+  { name: "Elizabeth Cuevas Arreola", id: "2086268", role: "Documentación", icon: "📋", image: "./elizabeth.jpg" },
+  { name: "Alan Yahir Correa Gutiérrez", id: "2007587", role: "Marketing", icon: "📡", image: "./alan.jpeg" },
+  { name: "Belén Quetzalli Martínez Gómez", id: "2043270", role: "Marketing", icon: "📡", image: "./belen.jpeg" },
 ];
 
 const OBJECTIVES = [
@@ -340,7 +340,7 @@ function SimulacionSection() {
           <div className="relative">
             <div className="hud-border bg-[#0d1529] overflow-hidden">
               <img
-                src="/plane.jpeg"
+                src="./plane.jpeg"
                 alt="Cockpit de aeronave militar con instrumentación avanzada"
                 className="w-full h-64 object-cover opacity-70"
               />
