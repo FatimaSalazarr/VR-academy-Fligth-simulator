@@ -11,11 +11,11 @@ const NAV_ITEMS = [
 
 const TEAM = [
   { name: "Adrián Martínez Treviño", id: "1958524", role: "Desarrollador de Hardware", icon: "⚙" },
-  { name: "Fatima Salazar Loyola", id: "2048779", role: "Programadora", icon: "💻", image: "./fati.jpeg" },
-  { name: "Doria Montserrat Castañeda Gastelum", id: "2056800", role: "Programadora", icon: "💻", image: "./doria_informal.jpg" },
+  { name: "Fatima Salazar Loyola", id: "2048779", role: "Programadora", icon: "💻", image: "fati.jpeg" },
+  { name: "Doria Montserrat Castañeda Gastelum", id: "2056800", role: "Programadora", icon: "💻", image: "doria_informal.jpg" },
   { name: "Elizabeth Cuevas Arreola", id: "2086268", role: "Documentación", icon: "📋" },
-  { name: "Alan Yahir Correa Gutiérrez", id: "2007587", role: "Marketing", icon: "📡", image: "./alan.jpeg" },
-  { name: "Belén Quetzalli Martínez Gómez", id: "2043270", role: "Marketing", icon: "📡", image: "./belen.jpeg" },
+  { name: "Alan Yahir Correa Gutiérrez", id: "2007587", role: "Marketing", icon: "📡", image: "alan.jpeg" },
+  { name: "Belén Quetzalli Martínez Gómez", id: "2043270", role: "Marketing", icon: "📡", image: "belen.jpeg" },
 ];
 
 const OBJECTIVES = [
@@ -339,9 +339,9 @@ function SimulacionSection() {
 
           <div className="relative">
             <div className="hud-border bg-[#0d1529] overflow-hidden">
-              <img
-                src="./plane.jpeg"
-                alt="Cockpit de aeronave militar con instrumentación avanzada"
+             <img
+                src={`${import.meta.env.BASE_URL}plane.jpeg`}
+                alt="Cockpit de aeronave militar"
                 className="w-full h-64 object-cover opacity-70"
               />
               <div className="p-6">
@@ -501,12 +501,11 @@ function EquipoSection() {
             >
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 border border-[#1a2d4a] group-hover:border-[#00d4ff33] flex items-center justify-center overflow-hidden flex-shrink-0 transition-colors bg-[#07091a]">
-                  {/* Si hay imagen, la muestra. Si no o si falla, muestra el icono */}
                   {member.image ? (
-                    <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
-                  ) : (
-                    <span className="text-xl">{member.icon}</span>
-                  )}
+                      <img src={`${import.meta.env.BASE_URL}${member.image}`} alt={member.name} className="w-full h-full object-cover" />
+                    ) : (
+                      <span className="text-xl">{member.icon}</span>
+                    )}    
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="font-display font-600 text-white text-base leading-tight tracking-wide mb-1 group-hover:text-[#00d4ff] transition-colors">
