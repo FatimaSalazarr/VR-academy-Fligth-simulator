@@ -340,7 +340,7 @@ function SimulacionSection() {
           <div className="relative">
             <div className="hud-border bg-[#0d1529] overflow-hidden">
              <img
-                src={`${import.meta.env.BASE_URL}plane.jpeg`}
+                src="./plane.jpeg"
                 alt="Cockpit de aeronave militar"
                 className="w-full h-64 object-cover opacity-70"
               />
@@ -502,10 +502,10 @@ function EquipoSection() {
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 border border-[#1a2d4a] group-hover:border-[#00d4ff33] flex items-center justify-center overflow-hidden flex-shrink-0 transition-colors bg-[#07091a]">
                   {member.image ? (
-                      <img src={`${import.meta.env.BASE_URL}${member.image}`} alt={member.name} className="w-full h-full object-cover" />
-                    ) : (
-                      <span className="text-xl">{member.icon}</span>
-                    )}    
+                    <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                  ) : (
+                    <span className="text-xl">{member.icon}</span>
+                  )}    
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="font-display font-600 text-white text-base leading-tight tracking-wide mb-1 group-hover:text-[#00d4ff] transition-colors">
