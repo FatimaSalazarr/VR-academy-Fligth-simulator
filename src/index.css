@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import 'tailwindcss';
+
+
+/* Puedes agregar aquí tus fuentes globales u otros estilos base si los necesitas */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+html,
+body,
+#root {
+  min-height: 100vh;
+}
+
+/* Sincroniza el fondo global de la página con el modo claro */
+body:has(.light-mode) {
+  background-color: #e0f2fe !important;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #00d4ff22 transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #00d4ff33;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  * {
+    scrollbar-width: none;
+  }
+  *::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@theme inline {
+  --color-background: #07091a;
+  --color-foreground: #e2e8f4;
+  --color-card: #0d1529;
+  --color-card-foreground: #c8d4e8;
+  --color-primary: #00d4ff;
+  --color-primary-foreground: #07091a;
+  --color-secondary: #0f1e3a;
+  --color-secondary-foreground: #8fa8cc;
+  --color-muted: #111e35;
+  --color-muted-foreground: #5a7a9e;
+  --color-accent: #00aadd;
+  --color-accent-foreground: #ffffff;
+  --color-border: #1a2d4a;
+  --color-ring: #00d4ff44;
+}
+
+.font-display {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.font-body {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-mono-label {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #07091a;
+  color: #e2e8f4;
+}
+
+.hud-border {
+  border: 1px solid #00d4ff22;
+  position: relative;
+}
+
+.hud-border::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid #00d4ff;
+  border-left: 2px solid #00d4ff;
+}
+
+.hud-border::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 12px;
+  height: 12px;
+  border-bottom: 2px solid #00d4ff;
+  border-right: 2px solid #00d4ff;
+}
+
+.scan-line {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    #00d4ff08 50%,
+    transparent 100%
+  );
+  animation: scan 4s ease-in-out infinite;
+}
+
+@keyframes scan {
+  0%, 100% { transform: translateY(-100%); opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  to { transform: translateY(100vh); opacity: 0; }
+}
+
+.glow-cyan {
+  text-shadow: 0 0 20px #00d4ff66;
+}
+
+.card-glow:hover {
+  box-shadow: 0 0 30px #00d4ff15, 0 0 60px #00d4ff08;
+  border-color: #00d4ff44;
+}
+
+.nav-link:hover {
+  color: #00d4ff;
+}
+
+.phase-line {
+  background: linear-gradient(90deg, #00d4ff, transparent);
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.pulse-slow {
+  animation: pulse-slow 2s ease-in-out infinite;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* ── Light mode — warm sand + amber palette ── */
+ 
+/* ── Light mode — Light Blue palette ── */
+.light-mode {
+  background-color: #e0f2fe; /* Azul cielo muy claro */
+  color: #0f172a; /* Texto oscuro de alto contraste */
+}
+
+.light-mode body {
+  background-color: #e0f2fe;
+  color: #0f172a;
+}
+
+/* Backgrounds */
+.light-mode .bg-\[\#07091a\]    { background-color: #e0f2fe !important; }
+.light-mode .bg-\[\#0a0e1f\]    { background-color: #bae6fd !important; }
+.light-mode .bg-\[\#0d1529\]    { background-color: #f0f9ff !important; }
+.light-mode .bg-\[\#0d1529\]\/80 { background-color: #f0f9ffcc !important; }
+.light-mode .bg-\[\#0d1529\]\/50 { background-color: #f0f9ff88 !important; }
+.light-mode .bg-\[\#07091a\]\/80 { background-color: #e0f2fecc !important; }
+.light-mode .bg-\[\#07091aee\]  { background-color: #e0f2feee !important; }
+.light-mode .bg-\[\#07091a\]\/60 { background-color: #e0f2fe99 !important; }
+.light-mode .bg-transparent    { background-color: transparent !important; }
+
+/* Text */
+.light-mode .text-white        { color: #0f172a !important; }
+.light-mode .text-\[\#e2e8f4\]  { color: #0f172a !important; }
+.light-mode .text-\[\#c8d4e8\]  { color: #1e293b !important; }
+.light-mode .text-\[\#8fa8cc\]  { color: #334155 !important; }
+.light-mode .text-\[\#5a7a9e\]  { color: #475569 !important; }
+.light-mode .text-\[\#3a5a7a\]  { color: #64748b !important; }
+.light-mode .text-\[\#1a2d4a\]  { color: #94a3b8 !important; }
+
+/* Accent — deep blue */
+.light-mode .text-\[\#00d4ff\]  { color: #0284c7 !important; }
+.light-mode .bg-\[\#00d4ff08\]  { background-color: #0284c712 !important; }
+.light-mode .bg-\[\#00d4ff\]    { background-color: #0284c7 !important; }
+
+/* Borders */
+.light-mode .border-\[\#1a2d4a\]   { border-color: #cbd5e1 !important; }
+.light-mode .border-\[\#00d4ff22\] { border-color: #0284c730 !important; }
+.light-mode .border-\[\#00d4ff33\] { border-color: #0284c748 !important; }
+.light-mode .border-\[\#00d4ff44\] { border-color: #0284c760 !important; }
+.light-mode .border-\[\#00d4ff\]   { border-color: #0284c7 !important; }
+
+/* HUD corners — blue */
+.light-mode .hud-border           { border-color: #cbd5e166 !important; }
+.light-mode .hud-border::before   { border-color: #0284c7 !important; }
+.light-mode .hud-border::after    { border-color: #0284c7 !important; }
+
+/* Card hover glow */
+.light-mode .card-glow:hover {
+  box-shadow: 0 0 30px #0284c718, 0 0 60px #0284c70a !important;
+  border-color: #0284c748 !important;
+}
+
+/* Phase gradient line */
+.light-mode .phase-line { background: linear-gradient(90deg, #0284c7, transparent) !important; }
+
+/* Glow text */
+.light-mode .glow-cyan { text-shadow: 0 0 20px #0284c744 !important; }
+
+/* Nav link hover */
+.light-mode .nav-link:hover { color: #0284c7 !important; }
+
+/* Pulse dot */
+.light-mode .pulse-slow { filter: hue-rotate(0deg) brightness(0.8); }
+
+/* Scrollbar in light mode */
+.light-mode * {
+  scrollbar-color: #0284c722 transparent;
+}
+.light-mode *::-webkit-scrollbar-thumb {
+  background: #0284c733;
+}
+
+/* ── Forzar fondo claro en la imagen y gradientes del Inicio (Hero) ── */
+
+/* 1. Hace casi transparente la imagen oscura del público */
+.light-mode #hero .z-0 {
+  opacity: 0.15 !important; 
+}
+
+/* 2. Reemplaza las sombras negras del gradiente por tonos azul claro */
+.light-mode #hero .bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, #e0f2fecc, transparent, #e0f2fe) !important;
+}
+
+/* =========================================
+   FORZAR FONDOS CLAROS (MODO DÍA)
+========================================= */
+
+/* 1. Fondo azul claro para toda la página y secciones */
+.light-mode,
+.light-mode body,
+.light-mode section {
+  background-color: #e0f2fe !important;
+}
+
+/* 2. Arreglar la imagen del Inicio (Hero) */
+.light-mode #hero .z-0 {
+  opacity: 0.15 !important; /* Convierte la imagen en una marca de agua suave */
+}
+
+/* 3. Eliminar los gradientes negros que tapan la imagen en el Hero */
+.light-mode #hero .z-0 div {
+  background: transparent !important; 
+}
+
+/* 4. Aclarar las tarjetas oscuras (Misión, Simulación, etc.) */
+.light-mode .hud-border,
+.light-mode .card-glow,
+.light-mode [class*="bg-[#0d1529]"] {
+  background-color: #f0f9ff !important;
+  border-color: #bae6fd !important;
+}
