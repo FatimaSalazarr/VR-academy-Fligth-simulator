@@ -1,0 +1,10 @@
+{
+  "description": "This web application offers a modern, visually appealing interface with dark mode and responsive design, enhancing user experience for all devices.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
